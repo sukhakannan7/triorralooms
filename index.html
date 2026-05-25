@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Triorra Looms — Handcrafted Indian Ethnic Wear</title>
+<meta name="description" content="Thoughtfully curated Indian ethnic wear — handpicked fabrics, artisanal prints, kurtis, sets and more. Order via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#c9962a;--gold-l:#e8c15a;
+  --mar:#6b1020;--mar-d:#3d0810;
+  --cr:#fdf8f0;--cr-d:#f5ede0;
+  --tx:#1a0a0a;--tx-m:#4a2020;--tx-l:#7a5050;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cr);color:var(--tx);font-family:'Cormorant Garamond',serif;overflow-x:hidden}
+
+.hero{position:relative;background:linear-gradient(155deg,var(--mar-d) 0%,var(--mar) 55%,#9a1525 100%);min-height:100svh;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:3rem 1.2rem 6rem;gap:2.2rem}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(201,150,42,.15) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(201,150,42,.1) 0%,transparent 50%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:14px;border:1px solid rgba(201,150,42,.25);pointer-events:none;border-radius:2px}
+.hero-inner{text-align:center;z-index:1;animation:rise .9s cubic-bezier(.16,1,.3,1) both}
+.hero-eyebrow{font-family:'Cinzel',serif;font-size:clamp(.5rem,2.5vw,.72rem);letter-spacing:.4em;color:var(--gold-l);text-transform:uppercase;margin-bottom:1.2rem}
+.hero-title{font-family:'Cinzel',serif;font-size:clamp(2.8rem,10vw,6rem);font-weight:600;color:#fff;line-height:1;letter-spacing:.06em;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.hero-title em{display:block;font-family:'Playfair Display',serif;font-size:clamp(1rem,4vw,2.2rem);font-weight:400;font-style:italic;color:var(--gold-l);letter-spacing:.22em;margin-top:.5rem}
+.hero-tagline{margin-top:1.5rem;font-style:italic;font-size:clamp(1rem,3vw,1.4rem);color:rgba(255,255,255,.7)}
+.hero-mosaic{display:flex;gap:.7rem;z-index:1;animation:rise 1.1s .18s both}
+.hero-mosaic img{width:clamp(60px,13vw,110px);height:clamp(90px,18vw,155px);object-fit:cover;border-radius:3px;box-shadow:0 12px 30px rgba(0,0,0,.5);border:2px solid rgba(201,150,42,.3)}
+.hero-mosaic img:nth-child(2),.hero-mosaic img:nth-child(4){transform:translateY(-12px)}
+.scroll-hint{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:rise 1.3s .35s both}
+.scroll-hint span{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.28em;color:rgba(201,150,42,.7);text-transform:uppercase}
+.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,rgba(201,150,42,.7),transparent);animation:pulse 2s ease-in-out infinite}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+.ticker{background:linear-gradient(90deg,var(--mar-d),var(--mar),var(--mar-d));padding:.9rem 0;overflow:hidden}
+.ticker-track{display:flex;white-space:nowrap;animation:ticker 35s linear infinite}
+.ticker-inner{font-family:'Cinzel',serif;font-size:clamp(.48rem,1.6vw,.65rem);letter-spacing:.28em;color:var(--gold-l);text-transform:uppercase;padding:0 3rem;white-space:nowrap}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.sec-head{text-align:center;padding:4rem 1.5rem 2rem}
+.sec-head .eye{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.38em;color:var(--gold);text-transform:uppercase;margin-bottom:.9rem}
+.sec-head h2{font-weight:300;font-size:clamp(1.8rem,6vw,3.2rem);color:var(--mar-d);line-height:1.1}
+.divider{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1rem}
+.dline{width:55px;height:1px;background:linear-gradient(to right,transparent,var(--gold))}
+.dline.r{background:linear-gradient(to left,transparent,var(--gold))}
+.dgem{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+
+.filter-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;padding:.5rem 1rem 2rem}
+.fbtn{font-family:'Cinzel',serif;font-size:clamp(.44rem,1.8vw,.55rem);letter-spacing:.2em;text-transform:uppercase;padding:.5rem 1rem;border:1px solid rgba(107,16,32,.22);background:transparent;color:var(--tx-m);cursor:pointer;transition:all .2s;border-radius:2px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.fbtn:hover,.fbtn.active{background:var(--mar);color:var(--gold-l);border-color:var(--mar)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(270px,45vw),1fr));gap:clamp(.65rem,2vw,2rem);padding:0 clamp(.65rem,2vw,2rem) 4rem;max-width:1400px;margin:0 auto}
+
+.card{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 2px 14px rgba(107,16,32,.07);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(107,16,32,.13)}
+.card.hidden{display:none}
+.card-img-wrap{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--cr-d);cursor:zoom-in}
+.card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .5s;display:block}
+.card:hover .card-img-wrap img{transform:scale(1.05)}
+.card-style-badge{position:absolute;top:.6rem;left:.6rem;background:rgba(61,8,16,.88);color:var(--gold-l);font-family:'Cinzel',serif;font-size:clamp(.36rem,1.2vw,.48rem);letter-spacing:.16em;text-transform:uppercase;padding:.22rem .5rem;border-radius:2px}
+.card-price-badge{position:absolute;bottom:.6rem;right:.6rem;background:var(--gold);color:#fff;font-family:'Cinzel',serif;font-size:clamp(.65rem,2.5vw,.85rem);font-weight:600;padding:.3rem .58rem;border-radius:3px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+/* product tag top-right */
+.card-tag{position:absolute;top:.6rem;right:.6rem;background:rgba(201,150,42,.92);color:#fff;font-family:'Cinzel',serif;font-size:clamp(.36rem,1.2vw,.46rem);letter-spacing:.12em;text-transform:uppercase;padding:.22rem .5rem;border-radius:2px;backdrop-filter:blur(4px)}
+
+.card-body{padding:clamp(.75rem,2.5vw,1.3rem);display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:clamp(.88rem,2.5vw,1.15rem);font-weight:500;color:var(--mar-d);margin-bottom:.4rem;line-height:1.25}
+.card-desc{font-style:italic;font-size:clamp(.8rem,2vw,.95rem);color:var(--tx-l);line-height:1.5;margin-bottom:.8rem;flex:1}
+.size-row{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.75rem}
+.sz{font-family:'Cinzel',serif;font-size:clamp(.4rem,1.4vw,.5rem);letter-spacing:.1em;padding:.2rem .44rem;border-radius:2px;text-transform:uppercase}
+.sz.available{background:var(--mar-d);color:var(--gold-l)}
+.sz.unavailable{background:rgba(0,0,0,.05);color:rgba(0,0,0,.22);text-decoration:line-through}
+.sz-note{font-family:'Cinzel',serif;font-size:clamp(.4rem,1.4vw,.5rem);letter-spacing:.1em;color:var(--tx-l);text-transform:uppercase}
+.card-foot{display:flex;flex-direction:column;gap:.5rem;margin-top:auto;padding-top:.75rem;border-top:1px solid rgba(107,16,32,.08)}
+.price{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,4vw,1.55rem);font-weight:700;color:var(--mar)}
+.price-enq{font-family:'Cinzel',serif;font-size:clamp(.44rem,1.5vw,.54rem);letter-spacing:.15em;color:var(--tx-l);text-transform:uppercase}
+
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:.45rem;width:100%;background:linear-gradient(135deg,#25d366,#128c5e);color:#fff;text-decoration:none;font-family:'Cinzel',serif;font-size:clamp(.46rem,1.6vw,.52rem);letter-spacing:.15em;text-transform:uppercase;padding:.6rem .8rem;border-radius:3px;border:none;transition:filter .2s,transform .2s;box-shadow:0 2px 8px rgba(37,211,102,.28);-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.wa-btn:hover,.wa-btn:active{filter:brightness(1.08);transform:translateY(-1px)}
+.wa-btn svg{width:14px;height:14px;flex-shrink:0;fill:currentColor;min-width:14px}
+.wa-label-full{display:none}
+.wa-label-short{display:inline}
+
+@media(min-width:520px){
+  .card-foot{flex-direction:row;align-items:center;flex-wrap:nowrap;gap:.6rem}
+  .wa-btn{width:auto;flex-shrink:0;white-space:nowrap}
+  .wa-label-full{display:inline}
+  .wa-label-short{display:none}
+}
+@media(max-width:480px){
+  .hero{padding:2.5rem 1rem 5rem;gap:1.8rem}
+  .hero::after{inset:10px}
+  .hero-mosaic img:nth-child(n+4){display:none}
+  .grid{grid-template-columns:repeat(2,1fr);gap:.55rem;padding:0 .55rem 3rem}
+  .card-desc{display:none}
+  .filter-bar{gap:.28rem;padding:.4rem .55rem 1.4rem}
+  .fbtn{padding:.42rem .65rem}
+  .sec-head{padding:2.8rem 1rem 1.4rem}
+}
+@media(min-width:481px) and (max-width:768px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:1rem;padding:0 1rem 3rem}
+}
+@media(min-width:1100px){
+  .grid{grid-template-columns:repeat(4,1fr)}
+}
+
+.about{background:linear-gradient(135deg,var(--mar-d),var(--mar));color:#fff;text-align:center;padding:clamp(3rem,8vw,5.5rem) clamp(1.2rem,5vw,3rem);position:relative;overflow:hidden}
+.about::before{content:'';position:absolute;inset:16px;border:1px solid rgba(201,150,42,.2);pointer-events:none}
+.about .eye{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.38em;color:var(--gold-l);text-transform:uppercase;margin-bottom:1.8rem}
+.about blockquote{font-style:italic;font-size:clamp(1rem,3vw,1.45rem);color:rgba(255,255,255,.85);line-height:1.65;max-width:680px;margin:0 auto 2.2rem;font-weight:300}
+.ig-link{display:inline-flex;align-items:center;gap:.5rem;font-family:'Cinzel',serif;font-size:clamp(.52rem,1.8vw,.62rem);letter-spacing:.25em;text-transform:uppercase;color:var(--gold-l);text-decoration:none;border:1px solid rgba(201,150,42,.4);padding:.8rem 1.8rem;border-radius:3px;transition:all .22s;touch-action:manipulation}
+.ig-link:hover{background:rgba(201,150,42,.15);border-color:var(--gold-l)}
+footer{background:var(--mar-d);color:rgba(255,255,255,.45);text-align:center;padding:1.8rem 1rem;font-family:'Cinzel',serif;font-size:clamp(.44rem,1.5vw,.53rem);letter-spacing:.18em;text-transform:uppercase}
+
+.lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:1000;align-items:center;justify-content:center;padding:1rem}
+.lb-overlay.open{display:flex}
+.lb-img{max-height:92svh;max-height:92vh;max-width:92vw;object-fit:contain;border-radius:4px;box-shadow:0 0 80px rgba(0,0,0,.8)}
+.lb-close{position:fixed;top:1rem;right:1rem;color:#fff;font-size:2rem;cursor:pointer;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.14);border-radius:50%;transition:background .2s;line-height:1;touch-action:manipulation}
+.lb-close:hover{background:rgba(255,255,255,.28)}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">✦ &nbsp; Est. 2024 &nbsp; · &nbsp; Handpicked &nbsp; · &nbsp; Artisanal &nbsp; ✦</p>
+    <h1 class="hero-title">TRIORRA <em>Looms</em></h1>
+    <p class="hero-tagline">Timeless Indian Ethnic Wear, Thoughtfully Curated</p>
+  </div>
+  <div class="hero-mosaic">
+    <img src="images/product_08.jpg" alt="Triorra collection">
+    <img src="images/product_10.jpg" alt="Triorra collection">
+    <img src="images/product_11.jpg" alt="Triorra collection">
+    <img src="images/product_12.jpg" alt="Triorra collection">
+    <img src="images/product_09.jpg" alt="Triorra collection">
+  </div>
+  <div class="scroll-hint"><span>Explore</span><div class="scroll-line"></div></div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-inner">✦ &nbsp; Free shipping above ₹999 &nbsp; ✦ &nbsp; Handpicked artisanal fabrics &nbsp; ✦ &nbsp; Sizes M · L · XL · 3XL &nbsp; ✦ &nbsp; WhatsApp +91 73567 72920 &nbsp; ✦ &nbsp; New arrivals every week &nbsp; ✦</span>
+    <span class="ticker-inner">✦ &nbsp; Free shipping above ₹999 &nbsp; ✦ &nbsp; Handpicked artisanal fabrics &nbsp; ✦ &nbsp; Sizes M · L · XL · 3XL &nbsp; ✦ &nbsp; WhatsApp +91 73567 72920 &nbsp; ✦ &nbsp; New arrivals every week &nbsp; ✦</span>
+  </div>
+</div>
+
+<section id="catalogue">
+  <div class="sec-head">
+    <p class="eye">✦ &nbsp; Our Collection &nbsp; ✦</p>
+    <h2>Discover Every Piece</h2>
+    <div class="divider"><div class="dline"></div><div class="dgem"></div><div class="dline r"></div></div>
+  </div>
+  <div class="filter-bar">
+    <button class="fbtn active" onclick="filterBy('all',this)">All</button>
+    <button class="fbtn" onclick="filterBy('Kurti',this)">Kurtis</button>
+    <button class="fbtn" onclick="filterBy('3-Piece Set',this)">3-Piece Sets</button>
+    <button class="fbtn" onclick="filterBy('Top',this)">Tops</button>
+    <button class="fbtn" onclick="filterBy('Anarkali',this)">Anarkali</button>
+    <button class="fbtn" onclick="filterBySize('M',this)">Size M</button>
+    <button class="fbtn" onclick="filterBySize('L',this)">Size L</button>
+    <button class="fbtn" onclick="filterBySize('XL',this)">Size XL</button>
+    <button class="fbtn" onclick="filterBySize('3XL',this)">Size 3XL</button>
+  </div>
+  <div class="grid">
+    <article class="card" data-sizes="all" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_01.jpg" alt="Black Floral Embroidery Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    
+    <div class="card-tag">#TL-01</div>
+  </div>
+  <div class="card-body">
+    <h3>Black Floral Embroidery Kurti</h3>
+    <p class="card-desc">Elegant black kurti with delicate floral embroidery band at the yoke — a timeless classic that pairs beautifully with matching palazzos.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ABlack%20Floral%20Embroidery%20Kurti%2A%20%28Ref%3A%20%23TL-01%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="3-Piece Set">
+  <div class="card-img-wrap">
+    <img src="images/product_02.jpg" alt="Olive Leaf Embroidery Set" loading="lazy">
+    <div class="card-style-badge">3-Piece Set</div>
+    
+    <div class="card-tag">#TL-02</div>
+  </div>
+  <div class="card-body">
+    <h3>Olive Leaf Embroidery Set</h3>
+    <p class="card-desc">Earthy olive green suit set with intricate leaf embroidery and a stunning matching dupatta — crafted for the modern ethnic woman.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2AOlive%20Leaf%20Embroidery%20Set%2A%20%28Ref%3A%20%23TL-02%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="3-Piece Set">
+  <div class="card-img-wrap">
+    <img src="images/product_03.jpg" alt="Maroon Paisley Kalamkari Set" loading="lazy">
+    <div class="card-style-badge">3-Piece Set</div>
+    
+    <div class="card-tag">#TL-03</div>
+  </div>
+  <div class="card-body">
+    <h3>Maroon Paisley Kalamkari Set</h3>
+    <p class="card-desc">Rich maroon base adorned with paisley kalamkari motifs and a gorgeous block-printed sheer dupatta — festivity in every thread.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2AMaroon%20Paisley%20Kalamkari%20Set%2A%20%28Ref%3A%20%23TL-03%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_04.jpg" alt="Lime Pintuck Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    
+    <div class="card-tag">#TL-04</div>
+  </div>
+  <div class="card-body">
+    <h3>Lime Pintuck Kurti</h3>
+    <p class="card-desc">Fresh lime green kurti featuring fine pintucks and white chikankari-style embroidery at the yoke and cuffs.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ALime%20Pintuck%20Kurti%2A%20%28Ref%3A%20%23TL-04%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_05.jpg" alt="Blush Pink Embroidered Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    
+    <div class="card-tag">#TL-05</div>
+  </div>
+  <div class="card-body">
+    <h3>Blush Pink Embroidered Kurti</h3>
+    <p class="card-desc">Soft blush pink kurti with subtle floral thread work — effortlessly feminine and perfect for everyday elegance.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ABlush%20Pink%20Embroidered%20Kurti%2A%20%28Ref%3A%20%23TL-05%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="3XL" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_06.jpg" alt="Ivory Teal Embroidered Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    
+    <div class="card-tag">#TL-06</div>
+  </div>
+  <div class="card-body">
+    <h3>Ivory Teal Embroidered Kurti</h3>
+    <p class="card-desc">Crisp ivory kurti with striking teal kashida embroidery panel and pineapple motifs scattered throughout the body.</p>
+    <div class="size-row"><span class="sz unavailable">M</span><span class="sz unavailable">L</span><span class="sz unavailable">XL</span><span class="sz available">3XL</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2AIvory%20Teal%20Embroidered%20Kurti%2A%20%28Ref%3A%20%23TL-06%29%0AAvailable%20sizes%3A%203XL%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Top">
+  <div class="card-img-wrap">
+    <img src="images/product_07.jpg" alt="White Block Print Sleeveless Top" loading="lazy">
+    <div class="card-style-badge">Top</div>
+    
+    <div class="card-tag">#TL-07</div>
+  </div>
+  <div class="card-body">
+    <h3>White Block Print Sleeveless Top</h3>
+    <p class="card-desc">Breezy sleeveless block print top with a relaxed A-line silhouette — pairs effortlessly with denim or palazzos.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2AWhite%20Block%20Print%20Sleeveless%20Top%2A%20%28Ref%3A%20%23TL-07%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="M L 3XL" data-style="3-Piece Set">
+  <div class="card-img-wrap">
+    <img src="images/product_08.jpg" alt="Teal Bandhani 3-Piece Set" loading="lazy">
+    <div class="card-style-badge">3-Piece Set</div>
+    <div class="card-price-badge">₹1050</div>
+    <div class="card-tag">#TL-08</div>
+  </div>
+  <div class="card-body">
+    <h3>Teal Bandhani 3-Piece Set</h3>
+    <p class="card-desc">Vibrant teal bandhani suit set with white dot motifs and a beautifully bordered dupatta — a heritage weave reimagined.</p>
+    <div class="size-row"><span class="sz available">M</span><span class="sz available">L</span><span class="sz unavailable">XL</span><span class="sz available">3XL</span></div>
+    <div class="card-foot">
+      <span class="price">₹1050</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ATeal%20Bandhani%203-Piece%20Set%2A%20%28Ref%3A%20%23TL-08%29%0APrice%3A%20%E2%82%B91050%0AAvailable%20sizes%3A%20M%2C%20L%2C%203XL%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="M L" data-style="3-Piece Set">
+  <div class="card-img-wrap">
+    <img src="images/product_09.jpg" alt="Teal Mirror Yoke Kurti Set" loading="lazy">
+    <div class="card-style-badge">3-Piece Set</div>
+    <div class="card-price-badge">₹1300</div>
+    <div class="card-tag">#TL-09</div>
+  </div>
+  <div class="card-body">
+    <h3>Teal Mirror Yoke Kurti Set</h3>
+    <p class="card-desc">Deep teal kurti featuring a rich ajrakh mirror-work yoke, matching pants and a contrasting burgundy printed dupatta.</p>
+    <div class="size-row"><span class="sz available">M</span><span class="sz available">L</span><span class="sz unavailable">XL</span><span class="sz unavailable">3XL</span></div>
+    <div class="card-foot">
+      <span class="price">₹1300</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ATeal%20Mirror%20Yoke%20Kurti%20Set%2A%20%28Ref%3A%20%23TL-09%29%0APrice%3A%20%E2%82%B91300%0AAvailable%20sizes%3A%20M%2C%20L%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="M L XL" data-style="3-Piece Set">
+  <div class="card-img-wrap">
+    <img src="images/product_10.jpg" alt="Teal Elephant Block Print Set" loading="lazy">
+    <div class="card-style-badge">3-Piece Set</div>
+    <div class="card-price-badge">₹1400</div>
+    <div class="card-tag">#TL-10</div>
+  </div>
+  <div class="card-body">
+    <h3>Teal Elephant Block Print Set</h3>
+    <p class="card-desc">Majestic teal set with traditional elephant block prints at the hem and cuffs — a celebration of Indian textile heritage.</p>
+    <div class="size-row"><span class="sz available">M</span><span class="sz available">L</span><span class="sz available">XL</span><span class="sz unavailable">3XL</span></div>
+    <div class="card-foot">
+      <span class="price">₹1400</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ATeal%20Elephant%20Block%20Print%20Set%2A%20%28Ref%3A%20%23TL-10%29%0APrice%3A%20%E2%82%B91400%0AAvailable%20sizes%3A%20M%2C%20L%2C%20XL%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="M 3XL" data-style="3-Piece Set">
+  <div class="card-img-wrap">
+    <img src="images/product_11.jpg" alt="Black Kalamkari Kurti Set" loading="lazy">
+    <div class="card-style-badge">3-Piece Set</div>
+    <div class="card-price-badge">₹1400</div>
+    <div class="card-tag">#TL-11</div>
+  </div>
+  <div class="card-body">
+    <h3>Black Kalamkari Kurti Set</h3>
+    <p class="card-desc">Striking black kurti with intricate kalamkari yoke and pants, paired with a vivid hand-block printed kalamkari dupatta.</p>
+    <div class="size-row"><span class="sz available">M</span><span class="sz unavailable">L</span><span class="sz unavailable">XL</span><span class="sz available">3XL</span></div>
+    <div class="card-foot">
+      <span class="price">₹1400</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ABlack%20Kalamkari%20Kurti%20Set%2A%20%28Ref%3A%20%23TL-11%29%0APrice%3A%20%E2%82%B91400%0AAvailable%20sizes%3A%20M%2C%203XL%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="M L XL" data-style="3-Piece Set">
+  <div class="card-img-wrap">
+    <img src="images/product_12.jpg" alt="Hot Pink Bandhani Set" loading="lazy">
+    <div class="card-style-badge">3-Piece Set</div>
+    <div class="card-price-badge">₹1050</div>
+    <div class="card-tag">#TL-12</div>
+  </div>
+  <div class="card-body">
+    <h3>Hot Pink Bandhani Set</h3>
+    <p class="card-desc">Bold hot pink bandhani set with white geometric motifs — a burst of color that commands attention and celebrates tradition.</p>
+    <div class="size-row"><span class="sz available">M</span><span class="sz available">L</span><span class="sz available">XL</span><span class="sz unavailable">3XL</span></div>
+    <div class="card-foot">
+      <span class="price">₹1050</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2AHot%20Pink%20Bandhani%20Set%2A%20%28Ref%3A%20%23TL-12%29%0APrice%3A%20%E2%82%B91050%0AAvailable%20sizes%3A%20M%2C%20L%2C%20XL%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="M L" data-style="3-Piece Set">
+  <div class="card-img-wrap">
+    <img src="images/product_13.jpg" alt="Grey Kalamkari Lotus Set" loading="lazy">
+    <div class="card-style-badge">3-Piece Set</div>
+    <div class="card-price-badge">₹1250</div>
+    <div class="card-tag">#TL-13</div>
+  </div>
+  <div class="card-body">
+    <h3>Grey Kalamkari Lotus Set</h3>
+    <p class="card-desc">Sophisticated grey base with kalamkari lotus and floral prints, complemented by a gorgeous printed kota dupatta.</p>
+    <div class="size-row"><span class="sz available">M</span><span class="sz available">L</span><span class="sz unavailable">XL</span><span class="sz unavailable">3XL</span></div>
+    <div class="card-foot">
+      <span class="price">₹1250</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2AGrey%20Kalamkari%20Lotus%20Set%2A%20%28Ref%3A%20%23TL-13%29%0APrice%3A%20%E2%82%B91250%0AAvailable%20sizes%3A%20M%2C%20L%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Top">
+  <div class="card-img-wrap">
+    <img src="images/product_14.jpg" alt="Indigo Block Print Peplum Top" loading="lazy">
+    <div class="card-style-badge">Top</div>
+    
+    <div class="card-tag">#TL-14</div>
+  </div>
+  <div class="card-body">
+    <h3>Indigo Block Print Peplum Top</h3>
+    <p class="card-desc">Vibrant indigo peplum top with intricate blue resist-dye block printing — pairs perfectly with denim or fitted bottoms.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2AIndigo%20Block%20Print%20Peplum%20Top%2A%20%28Ref%3A%20%23TL-14%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Anarkali">
+  <div class="card-img-wrap">
+    <img src="images/product_15.jpg" alt="Teal Gathered Anarkali" loading="lazy">
+    <div class="card-style-badge">Anarkali</div>
+    
+    <div class="card-tag">#TL-15</div>
+  </div>
+  <div class="card-body">
+    <h3>Teal Gathered Anarkali</h3>
+    <p class="card-desc">A flowing teal Anarkali with bandhani dots and a dramatic gathered silhouette — perfect for festive occasions.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ATeal%20Gathered%20Anarkali%2A%20%28Ref%3A%20%23TL-15%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_16.jpg" alt="Lime Embroidered Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    
+    <div class="card-tag">#TL-16</div>
+  </div>
+  <div class="card-body">
+    <h3>Lime Embroidered Kurti</h3>
+    <p class="card-desc">Refreshing lime-yellow kurti with vibrant hand-embroidered chrysanthemum motifs cascading down the front.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ALime%20Embroidered%20Kurti%2A%20%28Ref%3A%20%23TL-16%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Top">
+  <div class="card-img-wrap">
+    <img src="images/product_17.jpg" alt="Rust Ajrakh Peplum Top" loading="lazy">
+    <div class="card-style-badge">Top</div>
+    
+    <div class="card-tag">#TL-17</div>
+  </div>
+  <div class="card-body">
+    <h3>Rust Ajrakh Peplum Top</h3>
+    <p class="card-desc">Earthy rust ajrakh peplum top with traditional geometric prints — ideal for a fusion look with jeans or palazzos.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ARust%20Ajrakh%20Peplum%20Top%2A%20%28Ref%3A%20%23TL-17%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="L" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_18.jpg" alt="Black Mandala Pocket Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    <div class="card-price-badge">₹999</div>
+    <div class="card-tag">#TL-18</div>
+  </div>
+  <div class="card-body">
+    <h3>Black Mandala Pocket Kurti</h3>
+    <p class="card-desc">Sleek black kurti with V-neck, contrasting ajrakh cuffs, mandala-embellished pockets and side slit — contemporary meets traditional.</p>
+    <div class="size-row"><span class="sz unavailable">M</span><span class="sz available">L</span><span class="sz unavailable">XL</span><span class="sz unavailable">3XL</span></div>
+    <div class="card-foot">
+      <span class="price">₹999</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ABlack%20Mandala%20Pocket%20Kurti%2A%20%28Ref%3A%20%23TL-18%29%0APrice%3A%20%E2%82%B9999%0AAvailable%20sizes%3A%20L%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="XL" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_19.jpg" alt="Black Floral Bouquet Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    <div class="card-price-badge">₹1100</div>
+    <div class="card-tag">#TL-19</div>
+  </div>
+  <div class="card-body">
+    <h3>Black Floral Bouquet Kurti</h3>
+    <p class="card-desc">Rich black kurti featuring a bold floral bouquet embroidery at the neckline — elegant enough for any occasion.</p>
+    <div class="size-row"><span class="sz unavailable">M</span><span class="sz unavailable">L</span><span class="sz available">XL</span><span class="sz unavailable">3XL</span></div>
+    <div class="card-foot">
+      <span class="price">₹1100</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ABlack%20Floral%20Bouquet%20Kurti%2A%20%28Ref%3A%20%23TL-19%29%0APrice%3A%20%E2%82%B91100%0AAvailable%20sizes%3A%20XL%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_20.jpg" alt="Ivory Floral Block Print Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    
+    <div class="card-tag">#TL-20</div>
+  </div>
+  <div class="card-body">
+    <h3>Ivory Floral Block Print Kurti</h3>
+    <p class="card-desc">Delicate ivory kurti with all-over botanical block prints in soft greens and pinks — the ideal everyday ethnic piece.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2AIvory%20Floral%20Block%20Print%20Kurti%2A%20%28Ref%3A%20%23TL-20%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_21.jpg" alt="Lavender Chikankari Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    
+    <div class="card-tag">#TL-21</div>
+  </div>
+  <div class="card-body">
+    <h3>Lavender Chikankari Kurti</h3>
+    <p class="card-desc">Dreamy lavender kurti with tonal chikankari embroidery all over — soft, feminine and utterly graceful.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ALavender%20Chikankari%20Kurti%2A%20%28Ref%3A%20%23TL-21%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+<article class="card" data-sizes="all" data-style="Kurti">
+  <div class="card-img-wrap">
+    <img src="images/product_22.jpg" alt="Brown Ikat Print Kurti" loading="lazy">
+    <div class="card-style-badge">Kurti</div>
+    
+    <div class="card-tag">#TL-22</div>
+  </div>
+  <div class="card-body">
+    <h3>Brown Ikat Print Kurti</h3>
+    <p class="card-desc">Warm brown kurti with a classic ikat geometric pattern and a simple V-neck — effortless everyday style.</p>
+    <div class="size-row"><span class="sz-note">All sizes · enquire</span></div>
+    <div class="card-foot">
+      <span class="price-enq">Price on Request</span>
+      <a class="wa-btn" href="https://wa.me/917356772920?text=Hi%20Triorra%20Looms%21%20%F0%9F%91%8B%0A%0AI%27m%20interested%20in%20this%20item%3A%0A%2ABrown%20Ikat%20Print%20Kurti%2A%20%28Ref%3A%20%23TL-22%29%0A%0ACould%20you%20please%20confirm%20availability%20and%20help%20me%20place%20an%20order%3F%20Thank%20you%21" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="wa-label-full">Order via WhatsApp</span><span class="wa-label-short">Order</span>
+      </a>
+    </div>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="about">
+  <p class="eye">✦ &nbsp; About Triorra Looms &nbsp; ✦</p>
+  <blockquote>"We believe every woman deserves to feel beautiful in her own skin. Triorra Looms brings you thoughtfully curated Indian ethnic wear — handpicked fabrics, artisanal prints, and styles that celebrate the timeless spirit of Indian craftsmanship."</blockquote>
+  <a class="ig-link" href="https://www.instagram.com/triorralooms" target="_blank" rel="noopener">📸 &nbsp; @triorralooms on Instagram</a>
+</section>
+
+<footer><p>© 2025 Triorra Looms &nbsp;·&nbsp; Handcrafted with ♥ in India &nbsp;·&nbsp; All rights reserved</p></footer>
+
+<div class="lb-overlay" id="lb" onclick="closeLb(event)">
+  <span class="lb-close" onclick="closeLb()">×</span>
+  <img class="lb-img" id="lbImg" src="" alt="">
+</div>
+
+<script>
+function filterBy(style,btn){
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>{
+    c.classList.toggle('hidden',style!=='all'&&c.dataset.style!==style);
+  });
+}
+function filterBySize(size,btn){
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>{
+    c.classList.toggle('hidden',!c.dataset.sizes.split(' ').includes(size));
+  });
+}
+document.querySelectorAll('.card-img-wrap').forEach(wrap=>{
+  wrap.addEventListener('click',()=>{
+    document.getElementById('lbImg').src=wrap.querySelector('img').src;
+    document.getElementById('lb').classList.add('open');
+    document.body.style.overflow='hidden';
+  });
+});
+function closeLb(e){
+  if(!e||e.target!==document.getElementById('lbImg')){
+    document.getElementById('lb').classList.remove('open');
+    document.body.style.overflow='';
+  }
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+</script>
+</body>
+</html>
